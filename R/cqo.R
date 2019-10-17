@@ -61,8 +61,8 @@ cqo <-
   w <- model.weights(mf)
   if (!length(w)) {
     w <- rep_len(1, nrow(mf))
-  } else if (NCOL(w) == 1 && any(w < 0))
-    stop("negative weights not allowed")
+  } #else if (NCOL(w) == 1 && any(w < 0))
+    #stop("negative weights not allowed")
 
   if (is.character(family))
     family <- get(family)
